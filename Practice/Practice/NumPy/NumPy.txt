@@ -1,0 +1,41 @@
+- You are able to create 1D, 2D, 3D, 4D, etc.. Arrays.
+
+Why use NumPy over lists?
+- Lists are slow, while NumPy is fast.
+- No type checking when iterating through objects.
+    
+    Why? NumPy uses fixed types.
+    The numbers are read as binary from our computers, 
+    and in this case, 5 will be 00000101 in binary. That is 8 bits (1 byte).
+    When NumPy is used, 5 is cast into Int32, which consists of 4 bytes.
+    That is the default value. You can clarify how many bytes are needed.
+    To change the bytes, simply type either Int16 (2 bytes) or Int8 (1 byte)
+
+    Now with lists, there is a lot more information to store.
+    Lists read the size, reference count, object type, and object value. All of which have their own bytes.
+    With the single number 5, lists would be 28 bytes. I don't need to print out how that would look in binary.
+    4 bytes belong in size, 8 bytes belong in refernce count, object type, and object value.
+
+Contiguous Memory
+- Lists have pointers to information that is scattered around in our computer's memory.
+  The information is not together, thus costing resources to find and place correctly into a list.
+
+- NumPy has memory information stored together. 
+    Benefits: SIMD (Single Instruction Multiple Data) Vector Processing 
+    Effective Cache Utilization.
+
+How are lists different from NumPy?
+
+- NumPy can do everything a list can do, but much (much) more. Code will be shown in the folder to express that.
+
+Example:
+Lists - a = [1,3,5]     NumPy - a = np.array([1,3,5])
+        b = [1,2,3]             b = np.array([1,2,3])
+
+        a*b = ERROR             a*b = np.array(1,6,15)
+
+Applications of NumPy?
+- Mathematics (MATLAB Replacement)
+- Plotting (Matplotlib)
+- Backend (Pandas, Connect 4, Digital Photography)
+- Machine Learning (Indirectly and directly)
