@@ -1,0 +1,9 @@
+Why Pandas?
+
+Benefits
+- A lot more flexiblity with Pandas and using Python
+    Excel limits what you can do, but using Python 
+    allows you to do much more.
+
+- Working with Big Data
+    Easier to load big files.
